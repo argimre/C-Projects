@@ -6,33 +6,44 @@
 int main(){
 	int p_choice, c_choice;
 	srand(time(NULL));
+	int flag = 1;
+	
+        printf("Welcome to Rock, Paper, Scissors!\n");
 
-	printf("Welcome to Rock, Paper, Scissors!\n");
-    	printf("Enter your choice:\n");
-    	printf("0 = Rock, 1 = Paper, 2 = Scissors\n");
-    	scanf("%d", &p_choice);
+	while(flag){
+	
+		printf("0 = Rock, 1 = Paper, 2 = Scissors, 3 = EXIT\n");
+    		printf("Enter your choice: ");
+    		scanf("%d", &p_choice);
 
-	if (p_choice < 0 || p_choice > 2) {
-        	printf("Invalid choice! Please enter 0, 1, or 2.\n");
-        	return 1;
-    	}
+		if (p_choice < 0 || p_choice > 3) {
+        		printf("Invalid choice! Please enter 0, 1, 2, or 3.\n");
+        		return 1;
+    		}
 
-	    c_choice = rand() % 3;
+	    	c_choice = rand() % 3;
 
-    	printf("You chose: ");
-    	switch (p_choice) {
-        	case 0: printf("Rock\n"); break;
-        	case 1: printf("Paper\n"); break;
-        	case 2: printf("Scissors\n"); break;
-    	}
+    		printf("You chose: ");
+    		switch (p_choice) {
+        		case 0: printf("Rock\n"); break;
+        		case 1: printf("Paper\n"); break;
+        		case 2: printf("Scissors\n"); break;
+			case 3: printf("to exit\n"); break;
+    		}
 
-    	printf("Computer chose: ");
-    	switch (c_choice) {
-        	case 0: printf("Rock\n"); break;
-        	case 1: printf("Paper\n"); break;
-        	case 2: printf("Scissors\n"); break;
-    	}
+		if (p_choice == 3){
+                        flag = 0;
+                        break;
+                        return 1;
+                }
 
-	det_winner(p_choice, c_choice);
+    		printf("Computer chose: ");
+    		switch (c_choice) {
+        		case 0: printf("Rock\n"); break;
+        		case 1: printf("Paper\n"); break;
+        		case 2: printf("Scissors\n"); break;
+    		}
+		det_winner(p_choice, c_choice);
+	}
 	return 0;
 }
