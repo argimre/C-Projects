@@ -14,9 +14,8 @@ A simple command-line Rock, Paper, Scissors game written in C, where you can pla
 ## Example
 ```
 Welcome to Rock, Paper, Scissors!
-Enter your choice:
-0 = Rock, 1 = Paper, 2 = Scissors
-1
+0 = Rock, 1 = Paper, 2 = Scissors, 3 = EXIT
+Enter your choice: 1
 You chose: Paper
 Computer chose: Rock
 You win!
