@@ -22,4 +22,3 @@ detwinner.o: detwinner.c game.h
 # Clean up object files and the executable
 clean:
 	rm -f *.o rock_paper_scissors
-

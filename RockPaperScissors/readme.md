@@ -10,7 +10,6 @@ A simple command-line Rock, Paper, Scissors game written in C, where you can pla
 - Simple and easy-to-use interface.
 - Determine the winner based on classic game rules.
 
-
 ## Example
 ```
 Welcome to Rock, Paper, Scissors!
@@ -20,4 +19,3 @@ You chose: Paper
 Computer chose: Rock
 You win!
 ```
-
